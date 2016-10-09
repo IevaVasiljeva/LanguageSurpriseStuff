@@ -21,8 +21,8 @@ def optimize_alpha():
     y = []
     for i in values:
         alpha = i
-        model = m.Model("../training.en", vocabulary, alpha)
-        perplexity = model.calculate_perplexity("../test")
+        model = m.Model("../data/training.en", vocabulary, alpha)
+        perplexity = model.calculate_perplexity("../data/test")
         x.append(alpha)
         y.append(perplexity)
     plt.scatter(x, y)
